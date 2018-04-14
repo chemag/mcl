@@ -18,5 +18,19 @@ You can scroll the text to get the full codec list.
 
 Download the apk from [here](https://github.com/chemag/mcl/blob/master/app/release/app-release.apk).
 
+Install the app:
+
+```
+$ adb install app-release.apk
+Success
+```
+
+You may need to install any old copies.
+
+```
+$ adb shell pm uninstall com.example.mediacodeclist
+Success
+```
+
 Run it.
 
