@@ -43,7 +43,13 @@ BUILD SUCCESSFUL in 22s
 You can also run the instrumented unit-tests using adb.
 ```
 $ ./gradlew installDebug
+...
+Installing APK 'com.example.mediacodeclist-v1.0-debug.apk' on 'device-name' for app:debug
+...
 $ ./gradlew installDebugAndroidTest
+...
+Installing APK 'com.example.mediacodeclist-v1.0-debug-androidTest.apk' on 'device-name' for app:debugAndroidTest
+...
 
 $ adb shell am instrument -w com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
 $ adb shell am instrument -w -e class com.example.mediacodeclist.ExampleInstrumentedTest#useAppContext com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
