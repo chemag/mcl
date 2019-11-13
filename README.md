@@ -16,12 +16,39 @@ You can scroll the text to get the full codec list.
 # 3. Build Instructions
 
 Optionally, you can build the apk yourself.
-
 ```
 $ ./gradlew build
 $ ls -s ./app/build/outputs/apk/debug/com.example.mediacodeclist-v1.0-debug.apk
 1580K ./app/build/outputs/apk/debug/com.example.mediacodeclist-v1.0-debug.apk
 ```
+
+Optionally, you can run the local unit-tests.
+```
+$ ./gradlew test
+...
+BUILD SUCCESSFUL in 0s
+36 actionable tasks: 36 up-to-date
+```
+
+Optionally, you can run the instrumented unit-tests.
+```
+$ ./gradlew connectedAndroidTest
+...
+Starting 1 tests on Pixel - 10
+
+BUILD SUCCESSFUL in 22s
+51 actionable tasks: 1 executed, 50 up-to-date
+```
+
+You can also run the instrumented unit-tests using adb.
+```
+$ ./gradlew installDebug
+$ ./gradlew installDebugAndroidTest
+
+$ adb shell am instrument -w com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
+$ adb shell am instrument -w -e class com.example.mediacodeclist.ExampleInstrumentedTest#useAppContext com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
+```
+
 
 # 4. Install Instructions
 
