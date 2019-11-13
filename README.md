@@ -59,18 +59,12 @@ After this, check the list of codecs in your logcat.
 ```
 $ adb logcat |grep mediacodeclist
 ...
-11-13 14:19:47.561 19461 19482 E mediacodeclist: MediaCodecListDumper::getMediaCodecListString(): numCodecs: 65
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.aac.decoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.aac.encoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrnb.decoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrnb.encoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrwb.decoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrwb.encoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.flac.decoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.flac.encoder
+11-13 14:51:02.258 23157 23183 E mediacodeclist: MediaCodecListDumper::getMediaCodecListString(): numCodecs: 65
+11-13 14:51:02.258 23157 23183 E mediacodeclist:  name: OMX.google.aac.decoder type [ audio/mp4a-latm ]
+11-13 14:51:02.258 23157 23183 E mediacodeclist:  name: OMX.google.aac.encoder type [ audio/mp4a-latm ]
 ...
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  c2.android.vp9.decoder
-11-13 14:19:47.561 19461 19482 E mediacodeclist:  c2.android.vp9.encoder
+11-13 14:51:02.258 23157 23183 E mediacodeclist:  name: c2.android.vp9.decoder type [ video/x-vnd.on2.vp9 ]
+11-13 14:51:02.258 23157 23183 E mediacodeclist:  name: c2.android.vp9.encoder type [ video/x-vnd.on2.vp9 ]
 ```
 
 ```
