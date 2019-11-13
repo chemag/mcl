@@ -52,6 +52,28 @@ Installing APK 'com.example.mediacodeclist-v1.0-debug-androidTest.apk' on 'devic
 ...
 
 $ adb shell am instrument -w com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
+```
+
+After this, check the list of codecs in your logcat.
+
+```
+$ adb logcat |grep mediacodeclist
+...
+11-13 14:19:47.561 19461 19482 E mediacodeclist: MediaCodecListDumper::getMediaCodecListString(): numCodecs: 65
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.aac.decoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.aac.encoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrnb.decoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrnb.encoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrwb.decoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.amrwb.encoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.flac.decoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  OMX.google.flac.encoder
+...
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  c2.android.vp9.decoder
+11-13 14:19:47.561 19461 19482 E mediacodeclist:  c2.android.vp9.encoder
+```
+
+```
 $ adb shell am instrument -w -e class com.example.mediacodeclist.ExampleInstrumentedTest#useAppContext com.example.mediacodeclist.test/android.support.test.runner.AndroidJUnitRunner
 ```
 
